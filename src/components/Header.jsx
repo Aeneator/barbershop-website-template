@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import styles from "./Header.module.css";
 import NavLink from "./NavLink";
+import logo from "../assets/logo.png";
 
 const NAV_LINKS = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
+  { name: "Acasa", path: "/" },
+  { name: "Despre Noi", path: "/about" },
+  { name: "Program", path: "/program" },
+  { name: "Servicii", path: "/services" },
+  { name: "Galerie", path: "/gallery" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -20,8 +23,11 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
 
+
         <h1 className={styles.logo}>
-          <NavLink to="/" fontSize="--font-size-3xl">MySite</NavLink>
+          <NavLink to="/">
+            <img src={logo} alt="Logo" className={styles.logoImage} />
+          </NavLink>
         </h1>
 
         <nav className={styles.navLinks}>
@@ -44,7 +50,7 @@ export default function Header() {
               key={link.path}
               to={link.path}
               onClick={closeMenu}
-             fontSize="--font-size-xl"
+              fontSize="--font-size-xl"
             >
               {link.name}
             </NavLink>
