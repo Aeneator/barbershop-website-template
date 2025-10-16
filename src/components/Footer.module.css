@@ -34,6 +34,15 @@
     font-size: var(--font-size-md);
 }
 
+.phoneText {
+    display: block;
+    text-align: center;
+    color: var(--color-text, );
+    margin-top: 1rem;
+    font-size: var(--font-size-md);
+    font-weight: bold;
+}
+
 /* Bottom row: left / center / right */
 .bottomRow {
     display: flex;
@@ -75,6 +84,24 @@
 
 .socialIcon:hover {
     color: #ffa35c;
+}
+
+/* Footer.module.css */
+.phoneLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit;
+    /* keep same text color */
+    text-decoration: none;
+    /* remove underline */
+    cursor: pointer;
+}
+
+.phoneLink:focus {
+    outline: 2px solid #66afe9;
+    /* visible focus for keyboard users */
+    outline-offset: 2px;
 }
 
 /* Responsive for smaller screens */
